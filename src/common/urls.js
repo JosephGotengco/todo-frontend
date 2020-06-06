@@ -1,3 +1,3 @@
 module.exports = {
-    backend: "http://localhost:5000",
+    backend: "https://simple-todo-list-backend.herokuapp.com",
 };
