@@ -1,0 +1,22 @@
+module.exports = {
+    main: {
+        grey1: "#e2e6ec",
+        grey2: "#DCDCDC",
+        grey3: "#DDE2E9",
+        grey4: "#F3F6F7",
+        grey5: "#F4F7F8",
+        grey6: "#BAC1C7",
+        white1: "#FFFFFF",
+        black1: "#2F3542",
+        black2: "#282B31",
+        black3: "#555555",
+        blue1: "#A2D7D0",
+        red1: "#D63031",
+        red2: "#FF4757",
+        green1: "#46CB5C",
+        green2: "#C1EEC9",
+        green3: "#47CB5C",
+        green4: "#46c93a",
+        font: "Poppins",
+    },
+};
