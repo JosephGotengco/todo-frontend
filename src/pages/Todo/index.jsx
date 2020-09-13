@@ -71,6 +71,7 @@ const TodoPage = (props) => {
     useEffect(() => {
         const attemptLogin = async () => {
             const data = await checkIfLoggedIn();
+            console.log("atemptLogin,", data);
             const todos = data.user.todos || [];
             console.log("TODOS FROM TODO PAGE", todos);
             todo.dispatch({ type: "set_todos", payload: todos });
