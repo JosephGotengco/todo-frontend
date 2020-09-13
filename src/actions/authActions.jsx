@@ -10,13 +10,16 @@ export const login = async (email, password) => {
         {
             email,
             password,
-        }
+        },
+        { withCredentials: true }
     );
     return response.data;
 };
 
 export const checkIfLoggedIn = async () => {
-    const response = await axios.get(`${urls.backend}/auth/check`);
+    const response = await axios.get(`${urls.backend}/auth/check`, {
+        withCredentials: true,
+    });
     return response.data;
 }
 
@@ -27,12 +30,17 @@ export const register = async (email, password, confirmPassword) => {
             email,
             password,
             confirmPassword,
-        }
+        },
+        { withCredentials: true }
     );
     return response.data;
 };
 
 export const logout = async () => {
-    const response = await axios.post(`${urls.backend}/auth/logout`);
+    const response = await axios.post(
+        `${urls.backend}/auth/logout`,
+        {},
+        { withCredentials: true }
+    );
     return response.data;
 }

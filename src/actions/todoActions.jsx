@@ -5,20 +5,28 @@ import urls from "../common/urls";
 axios.defaults.withCredentials = true;
 
 export const addTodo = async (message) => {
-    const response = await axios.post(`${urls.backend}/todos`, {
-		todo: {
-			message,
-			done: false
-		}
-	});
+    const response = await axios.post(
+        `${urls.backend}/todos`,
+        {
+            todo: {
+                message,
+                done: false,
+            },
+        },
+        { withCredentials: true }
+    );
     return response.data;
 };
 
 export const deleteTodo = async (todo) => {
-	const response = await axios.delete(`${urls.backend}/todos`, {
-        data: {
-            todo,
+	const response = await axios.delete(
+        `${urls.backend}/todos`,
+        {
+            data: {
+                todo,
+            },
         },
-    });
+        { withCredentials: true }
+    );
 	return response.data;
 }
