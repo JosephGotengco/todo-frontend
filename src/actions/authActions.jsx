@@ -33,14 +33,13 @@ export const register = async (email, password, confirmPassword) => {
         },
         { withCredentials: true }
     );
+    console.log(response.data);
     return response.data;
 };
 
 export const logout = async () => {
     const response = await axios.post(
-        `${urls.backend}/auth/logout`,
-        {},
-        { withCredentials: true }
+        `${urls.backend}/auth/logout`
     );
     return response.data;
 }
